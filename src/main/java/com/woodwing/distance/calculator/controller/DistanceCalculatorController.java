@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Distance calculator related functionality.
+ *
+ * Created by Richard Hoquee 12/09/2019
+ */
 @RestController
 @RequestMapping("/api")
 public class DistanceCalculatorController {
@@ -40,12 +45,12 @@ public class DistanceCalculatorController {
                 body.getSecondDistance(),
                 body.getSecondDistanceUnit(),
                 body.getResponseDistanceUnit());
-        return distanceCalculatorService.doCalculateDistance(body.getFirstDistance(),
-                body.getFirstDistanceUnit(),
-                body.getSecondDistance(),
-                body.getSecondDistanceUnit(),
-                body.getResponseDistanceUnit());
 
+        return distanceCalculatorService.doCalculateDistance(body.getFirstDistanceUnit(),
+                body.getFirstDistance(),
+                body.getSecondDistanceUnit(),
+                body.getSecondDistance(),
+                body.getResponseDistanceUnit());
     }
 
 

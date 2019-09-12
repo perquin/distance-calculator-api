@@ -45,19 +45,19 @@ public class DistanceCalculatorValidationServiceTest {
     @Test
     public void testDistanceCalculationSecondDistanceEmpty() throws InvalidDataException {
         expectedException.expect(InvalidDataException.class);
-        distanceCalculatorValidationService.validateRequestDistanceData("","Yards","", "Yards", "Metres");
+        distanceCalculatorValidationService.validateRequestDistanceData("10.5","Yards","", "Yards", "Metres");
     }
 
     @Test
     public void testDistanceCalculationSecondDistanceUnitEmpty() throws InvalidDataException {
         expectedException.expect(InvalidDataException.class);
-        distanceCalculatorValidationService.validateRequestDistanceData("10.5","","10.5", "", "Metres");
+        distanceCalculatorValidationService.validateRequestDistanceData("10.5","Yards","10.5", "", "Metres");
     }
 
     @Test
     public void testDistanceCalculationResponseUnitEmpty() throws InvalidDataException {
         expectedException.expect(InvalidDataException.class);
-        distanceCalculatorValidationService.validateRequestDistanceData("10.5","","10.5", "", "");
+        distanceCalculatorValidationService.validateRequestDistanceData("10.5","Yards","10.5", "Yards", "");
     }
 
 

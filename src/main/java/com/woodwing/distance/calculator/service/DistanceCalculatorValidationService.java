@@ -30,7 +30,7 @@ public class DistanceCalculatorValidationService {
         }
 
         if(!NumberUtils.isParsable(firstDistance)) {
-            LOGGER.warn("First distance number is empty");
+            LOGGER.warn("First distance amount is invalid");
             throw new InvalidDataException("First distance number is missing");
         }
 
@@ -40,7 +40,7 @@ public class DistanceCalculatorValidationService {
         }
 
         if(!NumberUtils.isParsable(secondDistance)) {
-            LOGGER.warn("Second distance number is empty");
+            LOGGER.warn("Second distance amount is invalid");
             throw new InvalidDataException("Second distance number is missing");
         }
 
